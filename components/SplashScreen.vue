@@ -411,8 +411,8 @@ export default {
     return {
       anim: "proje",
       timer: null,
-      animateEnd: process.env.NODE_ENV == "development",
-      // animateEnd: false,
+      // animateEnd: process.env.NODE_ENV == "development",
+      animateEnd: true,
     };
   },
   beforeMount() {
