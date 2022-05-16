@@ -21,8 +21,18 @@
           <div class="context">{{ item.context }}</div>
         </div>
       </div>
-      <UtilitySpaces />
+    </div>
+    <div class="features-wrapper">
+      <div class="responsive-container features-container">
+        <div class="features-content" v-for="(feature, i) in features" :key="i">
+          <img :src="feature.img" alt="" />
+          <span v-html="feature.text['tr'].replace(' ', '<br>')"></span>
+        </div>
+      </div>
+    </div>
+    <UtilitySpaces />
 
+    <div class="responsive-container">
       <WorldConnectionAnimate />
 
       <UtilitySpaces />
@@ -73,11 +83,62 @@ export default {
           "Granül hale getirilen bentonit hammaddesinden üretilen kedi kumları yüksek sıvı emme kapasitesine, düşük toz içeriğine ve yüksek topaklanma kapasitesine sahip olurlar. Dolayısı ile bu kedi kumları sıvı emme ve topaklanma özelliği sayesinde hijyen sağlamasının yanı sıra koku emme özelliği ile de total bir hijyen sağlamaktadır. ",
       },
     ],
+    features: [
+      {
+        text: { tr: "KOKU KİLİDİ", en: "ODOUR LOCK" },
+        img: require("@/assets/koku.svg"),
+      },
+      {
+        text: { tr: "GÜÇLÜ TOPAKLANMA", en: "STRONG CLUMPING" },
+        img: require("@/assets/scoop.svg"),
+      },
+      {
+        text: {
+          tr: "YÜKSEK EMİLİM",
+          en: "HIGH APSORPTION",
+        },
+        img: require("@/assets/water.svg"),
+      },
+      {
+        text: { tr: "%99,5 TOZSUZ", en: "%99.5 DUST FREE" },
+        img: require("@/assets/dust.svg"),
+      },
+    ],
   }),
 };
 </script>
 
 <style lang="scss" scoped>
+.features-wrapper {
+  position: relative;
+  .features-container {
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    .features-content {
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+      width: 130px;
+      img {
+        background: #fff;
+        width: 70px;
+        border: 5px solid #fff;
+        border-radius: 15px;
+        box-shadow: 0px 0px 10px rgba(#000, 0.1);
+      }
+      span {
+        color: #445;
+        line-height: 20px;
+        font-size: 15px;
+        margin-top: 20px;
+        font-weight: normal;
+      }
+    }
+  }
+}
 .homepage-banner {
   background-image: url("@/assets/arena-bentonite-bg.jpg");
   background-position: center;

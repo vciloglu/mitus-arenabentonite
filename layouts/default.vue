@@ -28,7 +28,7 @@ body,
 html {
   margin: 0;
   padding: 0;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Dosis", sans-serif;
   color: #222;
   // overflow-x: hidden;
   .overflow-hidden {
