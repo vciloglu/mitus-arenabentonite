@@ -21,15 +21,34 @@
           <div class="context">{{ item.context }}</div>
         </div>
       </div>
-    </div>
-    <div class="features-wrapper">
+      <!-- <div class="features-wrapper">
       <div class="responsive-container features-container">
         <div class="features-content" v-for="(feature, i) in features" :key="i">
           <img :src="feature.img" alt="" />
           <span v-html="feature.text['tr'].replace(' ', '<br>')"></span>
         </div>
       </div>
+    </div> -->
+      <UtilitySpaces />
+      <div class="video-features">
+        <div class="video-content">
+          <video width="100%" height="auto" muted loop preload="auto" autoplay>
+            <source :src="require('@/assets/video.mp4')" type="video/mp4" />
+          </video>
+        </div>
+        <div class="features-container">
+          <div
+            class="features-content"
+            v-for="(feature, i) in features"
+            :key="i"
+          >
+            <img :src="feature.img" alt="" />
+            <span v-html="feature.text['tr'].replace(' ', '<br>')"></span>
+          </div>
+        </div>
+      </div>
     </div>
+
     <UtilitySpaces />
 
     <div class="responsive-container">
@@ -109,32 +128,58 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.features-wrapper {
+.video-features {
   position: relative;
+  .video-content {
+    max-width: 900px;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    font-size: 0;
+  }
+  margin-bottom: 100px;
   .features-container {
     display: flex;
-    position: relative;
+    position: absolute;
+    bottom: -80px;
     justify-content: flex-end;
+    width: 100%;
     .features-content {
-      padding: 10px;
       display: flex;
-      align-items: center;
-      text-align: center;
       flex-direction: column;
-      width: 130px;
-      img {
-        background: #fff;
-        width: 70px;
-        border: 5px solid #fff;
-        border-radius: 15px;
-        box-shadow: 0px 0px 10px rgba(#000, 0.1);
+      align-items: center;
+      border: 1px solid #8bc63f;
+      background: #fff;
+      border-radius: 5px;
+      padding: 10px;
+      box-shadow: 0px 0px 20px rgba(#000, 0.2);
+      margin: 10px;
+      &:not(:last-child) {
       }
-      span {
-        color: #445;
-        line-height: 20px;
-        font-size: 15px;
-        margin-top: 20px;
-        font-weight: normal;
+      img {
+        width: 100px;
+        font-size: 0;
+      }
+      text-align: center;
+      // 640px
+      // 768px
+      // 1024px
+      // 1280px
+      @media screen and (max-width: 1024px) {
+        img {
+          width: 60px;
+        }
+        span {
+          font-size: 12px;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        img {
+          width: 40px;
+        }
+        span {
+          font-size: 8px;
+        }
       }
     }
   }
@@ -211,7 +256,7 @@ export default {
       margin-bottom: 50px;
     }
     .context {
-      line-height: 30px;
+      line-height: 26px;
       color: #888;
       text-align: justify;
     }
