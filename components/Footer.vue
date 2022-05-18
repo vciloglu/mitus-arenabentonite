@@ -4,7 +4,7 @@
       <div class="footer-contents">
         <div class="footer-contents_item:contacts">
           <div class="top-line-logo">
-            <Logo :color="'#fff'" animation firm-bg="#333333" />
+            <LogoArena white style="padding: 0 40px 0 0" />
           </div>
           <div class="middle-line-address">
             <p>
