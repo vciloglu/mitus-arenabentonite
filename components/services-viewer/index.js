@@ -4,19 +4,19 @@ export default {
     return {
       services: [
         {
-          title: "Arama",
-          service: "exploration",
-          background: "MitusArama.jpg",
+          title: "Bentonite",
+          service: "bentonite",
+          background: "bentonite.jpg",
         },
         {
-          title: "Maden",
-          service: "mine",
-          background: "MitusMaden.jpg",
+          title: "Cats Arena",
+          service: "catsarena",
+          background: "cats-arena-box.jpg",
         },
         {
-          title: "Proje",
-          service: "project",
-          background: "MitusProje.jpg",
+          title: "Kozmetik",
+          service: "cosmetic",
+          background: "cosmetic.jpg",
         },
       ],
     };
@@ -30,18 +30,15 @@ export default {
     getLogo(title) {
       let logo = <div></div>;
       switch (title) {
-        case "project":
-          logo = <ServicesViewerLogoProje color="white" />;
+        case "cosmetic":
+          logo = <LogoArena cosmetic white />;
           break;
-        case "exploration":
-          logo = <ServicesViewerLogoArama color="white" />;
+        case "catsarena":
+          logo = <LogoCatsArena white />;
           break;
-
-        case "environmental":
-          logo = <ServicesViewerLogoCevre color="white" />;
+        default:
+          logo = <LogoArena white />;
           break;
-        case "mine":
-          logo = <ServicesViewerLogoMine color="white" />;
       }
       return logo;
     },

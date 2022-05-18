@@ -1,10 +1,9 @@
 export default {
   firmName: "MİTUS",
   menu: {
-    project: "PROJECT",
-    exploration: "EXPLORATION",
-    environmental: "ENVIRONMENT",
-    mine: "MINE",
+    bentonite: "BENTONITE",
+    cats: "ARENA",
+    cosmetic: "COSMETIC",
     IK: "IK",
     abouts: "ABOUT US",
     legislationAndDevelopments: "LEGISLATION AND DEVELOPMENTS",

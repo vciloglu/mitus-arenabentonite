@@ -62,7 +62,7 @@ export default {
       return this.filterLeft.map((item) => {
         return (
           <nuxt-link class="menu-link" to={this.localePath(item.link)}>
-            <span>{this.$t("firmName")}</span>
+            <span>{item.cats ? "CATS" : "ARENA"}</span>
             <span class="gray">{this.$t(item.i18n)}</span>
           </nuxt-link>
         );
