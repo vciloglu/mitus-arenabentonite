@@ -61,11 +61,11 @@
         position: relative;
         transition: none;
         &:not(.language).nuxt-link-active {
-          color: #084c9e;
+          color: #8bc63f;
           &:after {
             left: 0 !important;
             width: 100% !important;
-            background: #084c9e;
+            background: #8bc63f;
           }
         }
         &.language {
