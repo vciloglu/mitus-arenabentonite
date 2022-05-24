@@ -2,6 +2,7 @@
   <!-- Generator: Adobe Illustrator 20.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
   <!-- Generator: Adobe Illustrator 20.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
   <svg
+    ref="worldSVG"
     version="1.1"
     id="Layer_1"
     xmlns="http://www.w3.org/2000/svg"
@@ -11,6 +12,10 @@
     viewBox="0 0 1885.8 958.1"
     style="enable-background: new 0 0 1885.8 958.1"
     xml:space="preserve"
+    v-observe-visibility="{
+      callback: visibilityChanged,
+      once: true,
+    }"
   >
     <g id="MAP">
       <path
@@ -1249,146 +1254,171 @@
         d="M1634,524c0.3,0.3,0.7,0.5,0.1,0.9c-0.1,0-0.4-0.3-0.6-0.5C1633.7,524.3,1633.8,524.1,1634,524z"
       />
     </g>
-    <text transform="matrix(1 0 0 1 720 194)" class="st1 st2">AMSTERDAM</text>
-    <text transform="matrix(1 0 0 1 916 172)" class="st1 st3">BERLIN</text>
-    <text transform="matrix(1 0 0 1 1029 138)" class="st1 st4">MOSCOW</text>
-    <text transform="matrix(1 0 0 1 245 321)" class="st1 st5">NEWYORK</text>
-    <text transform="matrix(1 0 0 1 265 258)" class="st1 st6">TORONTO</text>
-    <g id="LINE">
-      <line class="st7" x1="1055" y1="269" x2="1055" y2="269">
-        <animate
-          attributeName="x2"
-          from="1055"
-          to="967"
-          :dur="lineDuration + 0.2"
-          fill="freeze"
-        />
-        <animate
-          attributeName="y2"
-          from="269"
-          to="193"
-          :dur="lineDuration + 0.3"
-          fill="freeze"
-        />
-      </line>
-      <line class="st7" x1="1064" y1="269" x2="1064" y2="269">
-        <animate
-          attributeName="x2"
-          from="1064"
-          to="1082"
-          :dur="lineDuration"
-          fill="freeze"
-        />
-        <animate
-          attributeName="y2"
-          from="269"
-          to="159"
-          :dur="lineDuration"
-          fill="freeze"
-        />
-      </line>
-      <line class="st7" x1="1049" y1="272" x2="1049" y2="272">
-        <animate
-          attributeName="x2"
-          from="1049"
-          to="916"
-          :dur="lineDuration"
-          fill="freeze"
-        />
-        <animate
-          attributeName="y2"
-          from="272"
-          to="199"
-          :dur="lineDuration"
-          fill="freeze"
-        />
-      </line>
-      <line class="st7" x1="1042" y1="277" x2="1042" y2="277">
-        <animate
-          attributeName="x2"
-          from="1042"
-          to="428"
-          :dur="lineDuration"
-          fill="freeze"
-        />
-        <animate
-          attributeName="y2"
-          from="277"
-          to="252"
-          :dur="lineDuration"
-          fill="freeze"
-        />
-      </line>
-      <line class="st7" x1="1040" y1="285" x2="1040" y2="285">
-        <animate
-          attributeName="x2"
-          from="1040"
-          to="412"
-          :dur="lineDuration"
-          fill="freeze"
-        />
-        <animate
-          attributeName="y2"
-          from="285"
-          to="317"
-          :dur="lineDuration"
-          fill="freeze"
-          keySplines="0.4 0 0.2 1; 0.4 0 0.2 1"
-        />
-      </line>
-    </g>
-    <g id="Marker">
-      <g id="MARKER">
-        <circle class="st8" id="s" cx="1084.2" cy="148.8" r="0">
+    <text transform="matrix(1 0 0 1 720 194)" class="st1 st2 text">
+      AMSTERDAM
+    </text>
+    <text transform="matrix(1 0 0 1 916 172)" class="st1 st3 text">BERLIN</text>
+    <text transform="matrix(1 0 0 1 1029 138)" class="st1 st4 text">
+      MOSCOW
+    </text>
+    <text transform="matrix(1 0 0 1 245 321)" class="st1 st5 text">
+      NEWYORK
+    </text>
+    <text transform="matrix(1 0 0 1 265 258)" class="st1 st6 text">
+      TORONTO
+    </text>
+    <g>
+      <g id="LINE" ref="lines">
+        <line class="st7" x1="1055" y1="269" x2="1055" y2="269">
           <animate
-            attributeName="r"
-            attributeType="XML"
-            :begin="lineDuration + 0.5"
-            values="0;5;4;5"
-            dur="1s"
+            begin="indefinite"
+            attributeName="x2"
+            from="1055"
+            to="967"
+            :dur="lineDuration + 0.2"
             fill="freeze"
           />
-        </circle>
-        <circle class="st8" id="s" cx="960.5" cy="185.5" r="0">
           <animate
-            attributeName="r"
-            attributeType="XML"
-            :begin="lineDuration + 0.5"
-            values="0;5;4;5"
-            dur="1s"
+            begin="indefinite"
+            attributeName="y2"
+            from="269"
+            to="193"
+            :dur="lineDuration + 0.3"
             fill="freeze"
           />
-        </circle>
-        <circle class="st8" id="s" cx="905.4" cy="192.8" r="0">
+        </line>
+        <line class="st7" x1="1064" y1="269" x2="1064" y2="269">
           <animate
-            attributeName="r"
-            attributeType="XML"
-            :begin="lineDuration + 0.5"
-            values="0;5;4;5"
-            dur="1s"
+            begin="indefinite"
+            attributeName="x2"
+            from="1064"
+            to="1082"
+            :dur="lineDuration"
             fill="freeze"
           />
-        </circle>
-        <circle class="st8" id="s" cx="402" cy="318.4" r="0">
           <animate
-            attributeName="r"
-            attributeType="XML"
-            :begin="lineDuration + 0.5"
-            values="0;5;4;5"
-            dur="1s"
+            begin="indefinite"
+            attributeName="y2"
+            from="269"
+            to="159"
+            :dur="lineDuration"
             fill="freeze"
           />
-        </circle>
-        <circle class="st8" id="s" cx="416.4" cy="252.1" r="0">
+        </line>
+        <line class="st7" x1="1049" y1="272" x2="1049" y2="272">
           <animate
-            attributeName="r"
-            attributeType="XML"
-            :begin="lineDuration + 0.5"
-            values="0;5;4;5"
-            dur="1s"
+            begin="indefinite"
+            attributeName="x2"
+            from="1049"
+            to="916"
+            :dur="lineDuration"
             fill="freeze"
           />
-        </circle>
+          <animate
+            begin="indefinite"
+            attributeName="y2"
+            from="272"
+            to="199"
+            :dur="lineDuration"
+            fill="freeze"
+          />
+        </line>
+        <line class="st7" x1="1042" y1="277" x2="1042" y2="277">
+          <animate
+            begin="indefinite"
+            attributeName="x2"
+            from="1042"
+            to="428"
+            :dur="lineDuration"
+            fill="freeze"
+          />
+          <animate
+            begin="indefinite"
+            attributeName="y2"
+            from="277"
+            to="252"
+            :dur="lineDuration"
+            fill="freeze"
+          />
+        </line>
+        <line class="st7" x1="1040" y1="285" x2="1040" y2="285">
+          <animate
+            begin="indefinite"
+            attributeName="x2"
+            from="1040"
+            to="412"
+            :dur="lineDuration"
+            fill="freeze"
+          />
+          <animate
+            begin="indefinite"
+            attributeName="y2"
+            from="285"
+            to="317"
+            :dur="lineDuration"
+            fill="freeze"
+            keySplines="0.4 0 0.2 1; 0.4 0 0.2 1"
+          />
+        </line>
+      </g>
+      <g id="Marker">
+        <g id="MARKER">
+          <circle class="st8" id="s" cx="1084.2" cy="148.8" r="0">
+            <animate
+              begin="indefinite"
+              attributeName="r"
+              attributeType="XML"
+              :begin="lineDuration + 0.5"
+              values="0;5;4;5"
+              dur="1s"
+              fill="freeze"
+            />
+          </circle>
+          <circle class="st8" id="s" cx="960.5" cy="185.5" r="0">
+            <animate
+              begin="indefinite"
+              attributeName="r"
+              attributeType="XML"
+              :begin="lineDuration + 0.5"
+              values="0;5;4;5"
+              dur="1s"
+              fill="freeze"
+            />
+          </circle>
+          <circle class="st8" id="s" cx="905.4" cy="192.8" r="0">
+            <animate
+              begin="indefinite"
+              attributeName="r"
+              attributeType="XML"
+              :begin="lineDuration + 0.5"
+              values="0;5;4;5"
+              dur="1s"
+              fill="freeze"
+            />
+          </circle>
+          <circle class="st8" id="s" cx="402" cy="318.4" r="0">
+            <animate
+              begin="indefinite"
+              attributeName="r"
+              attributeType="XML"
+              :begin="lineDuration + 0.5"
+              values="0;5;4;5"
+              dur="1s"
+              fill="freeze"
+            />
+          </circle>
+          <circle class="st8" id="s" cx="416.4" cy="252.1" r="0">
+            <animate
+              begin="indefinite"
+              attributeName="r"
+              attributeType="XML"
+              :begin="lineDuration + 0.5"
+              values="0;5;4;5"
+              dur="1s"
+              fill="freeze"
+            />
+          </circle>
+        </g>
       </g>
     </g>
   </svg>
@@ -1397,12 +1427,39 @@
 <script>
 export default {
   data: () => ({
+    start: false,
     lineDuration: 3,
   }),
+  methods: {
+    visibilityChanged(x) {
+      if (x) {
+        this.start = true;
+        this.$el.querySelectorAll("animate").forEach((anim) => {
+          anim.beginElement();
+        });
+      }
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
+.start {
+  .text {
+    animation: show 0.5s ease backwards;
+    animation-delay: 5s;
+    fill: #888;
+  }
+  @keyframes show {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
 .st0 {
   fill: #e4e7ea;
 }
@@ -1427,39 +1484,12 @@ export default {
 }
 .st7 {
   fill: none;
-  stroke: #057010;
-  stroke-width: 3;
+  stroke: #8bc63f;
+  stroke-width: 5;
   stroke-linecap: round;
   stroke-miterlimit: 10;
 }
 .st8 {
   fill: red;
-}
-
-text {
-}
-#LINE line {
-  &.short {
-    stroke: black;
-    stroke-width: 5;
-    stroke-dasharray: 5000;
-    stroke-dashoffset: 5000;
-    animation: dash 50s linear forwards;
-    animation-delay: 2s;
-  }
-  &.long {
-    stroke: black;
-    stroke-width: 5;
-    stroke-dasharray: 5000;
-    stroke-dashoffset: 5000;
-    animation: dash 20s linear forwards;
-    animation-delay: 2s;
-  }
-}
-
-@keyframes dash {
-  to {
-    stroke-dashoffset: 10;
-  }
 }
 </style>

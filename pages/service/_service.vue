@@ -71,6 +71,8 @@ export default {
       font-size: 18px;
       line-height: 1.6;
       margin-top: 20px;
+      max-width: 768px;
+      margin: 20px auto;
     }
   }
   .buttons-container {
