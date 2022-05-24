@@ -86,7 +86,7 @@ export default {
   },
   beforeMount() {
     setTimeout(() => {
-      // this.animateEnd = true;
+      this.animateEnd = true;
       clearInterval(this.timer);
     }, 5000);
   },
