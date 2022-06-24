@@ -13,11 +13,6 @@ export default {
           service: "catsarena",
           background: "cats-arena-box.jpg",
         },
-        {
-          title: "Kozmetik",
-          service: "cosmetic",
-          background: "cosmetic.jpg",
-        },
       ],
     };
   },
@@ -30,9 +25,6 @@ export default {
     getLogo(title) {
       let logo = <div></div>;
       switch (title) {
-        case "cosmetic":
-          logo = <LogoArena cosmetic white />;
-          break;
         case "catsarena":
           logo = <LogoCatsArena white />;
           break;

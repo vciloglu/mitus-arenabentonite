@@ -3,9 +3,7 @@
     <div
       class="service-banner"
       :style="{
-        backgroundImage: `url(${
-          serviceData[$route.params.service].bannerImage
-        })`,
+        backgroundImage: `url(${bannerImage})`,
       }"
     >
       <h1 style="text-transform: uppercase">{{ $route.params.service }}</h1>
@@ -27,14 +25,11 @@
 <script>
 export default {
   data: () => ({
-    serviceData: {
-      bentonite: {
-        bannerImage: require("@/components/service/assets/bentonite-banner.jpg"),
-      },
-    },
+    bannerImage: undefined,
   }),
   created() {
     console.log(this.$route.params);
+    this.bannerImage = require("@/components/service/assets/bentonite-banner.jpg");
   },
 };
 </script>
