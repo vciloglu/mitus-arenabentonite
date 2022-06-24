@@ -1,6 +1,13 @@
 <template>
   <div style="margin-top: 60px; padding: 10">
-    <div class="service-banner">
+    <div
+      class="service-banner"
+      :style="{
+        backgroundImage: `url(${
+          serviceData[$route.params.service].bannerImage
+        })`,
+      }"
+    >
       <h1 style="text-transform: uppercase">{{ $route.params.service }}</h1>
     </div>
     <UtilitySpaces />
@@ -9,21 +16,6 @@
         <ServiceFeatureView />
       </div>
       <UtilitySpaces />
-      <section class="section-parallax">
-        <div class="container">
-          <div class="section-header">
-            <h5 class="title">PRIVATE LABEL PACKAGING</h5>
-            <div class="text">
-              We can create your private label brand together, in accordance
-              with granule size , the type of packaging, the fragrance and
-              colored granules and the delivery term you prefer..
-            </div>
-          </div>
-          <div class="buttons-container">
-            <a class="button" href="#"> Click For Creataing Your Own Brand </a>
-          </div>
-        </div>
-      </section>
     </div>
     <div v-else-if="$route.params.service === 'catsarena'">
       <ServiceProductList />
@@ -34,6 +26,13 @@
 
 <script>
 export default {
+  data: () => ({
+    serviceData: {
+      bentonite: {
+        bannerImage: require("@/components/service/assets/bentonite-banner.jpg"),
+      },
+    },
+  }),
   created() {
     console.log(this.$route.params);
   },
